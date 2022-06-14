@@ -21,9 +21,10 @@ document.onreadystatechange = async function () {
                 softSkills = resul.softSkills
                 if (!hardSkills) {
                     window.location.href = '/view/createCurriculum.html'
-                }
-                if (!softSkills) {
+                }else if (!softSkills) {
                     window.location.href = '/view/testeSoftSkill.html'
+                } else if (!softSkills && !hardSkills) {
+                    window.location.href = '/view/createCurriculum.html'
                 }
                 document.getElementById('userNameNavBar').innerHTML = `${nome}`
                 checkVagas()

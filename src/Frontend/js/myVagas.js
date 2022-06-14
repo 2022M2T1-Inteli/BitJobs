@@ -97,33 +97,41 @@ async function checkVagas() {
 
     console.log(nome, id, email)
 
-    vagas.map((vaga) => {
+    console.log(vagas)
 
-        let color = 'black'
+    if (vagas == "") {
+        document.getElementById('containerOfAll').innerHTML += `<h3 class = "" style = "margin-top: 120px;">OPS! Verificamos que você ainda não se candidatou a nenhuma vaga. Recomandamos a você acessar a página de "VAGAS".</h3>`
+    } else {
+        vagas.map((vaga) => {
 
-        document.getElementById('containerOfAll').innerHTML += `
-        <div class = "col-sm-12 col-md-6 col-lg-4 bodyVagaComponent" id="vaga">
-            <div class = 'vagaComponent' style="box-shadow:  2px 4px 5px var(--shadow-${color}), -2px 4px 5px var(--shadow-${color});">
-                <div class="row mainWidGet">
-                    <div class="col-5 imgHubVagas">
-                        <img src = '../images/userTest.png' style = "width: 100px;">
-                    </div>
-                    <div class="col-7">
-                        <div class="divRightHubVagasComponent">
-                            <h1 class="nomeVagaHubVagas">${vaga.name}</h1>
-                            <p class="pForHubVagas"><i class="fa fa-map-marker" aria-hidden="true"></i>São Paulo</p>
-                            <p class="pForHubVagas d-flex"><i class="fa fa-briefcase briefcase-yellow" aria-hidden="true"></i>${vaga.type}</p>
-                            <p class="pForHubVagas d-flex"><i class="fa fa-info-circle info-circle-yellow" aria-hidden="true"></i>${vaga.status}</p>
-                            <div class = 'divBtnSeeMore'>
-                                <button class="btnSeeMore" type="button" onclick="redirectToVagaId('${vaga.id}')">Ver Mais</button>
+            let color = 'black'
+    
+            document.getElementById('containerOfAll').innerHTML += `
+            <div class = "col-sm-12 col-md-6 col-lg-4 bodyVagaComponent" id="vaga">
+                <div class = 'vagaComponent' style="box-shadow:  2px 4px 5px var(--shadow-${color}), -2px 4px 5px var(--shadow-${color});">
+                    <div class="row mainWidGet">
+                        <div class="col-5 imgHubVagas">
+                            <img src = '../images/userTest.png' style = "width: 100px;">
+                        </div>
+                        <div class="col-7">
+                            <div class="divRightHubVagasComponent">
+                                <h1 class="nomeVagaHubVagas">${vaga.name}</h1>
+                                <p class="pForHubVagas"><i class="fa fa-map-marker" aria-hidden="true"></i>São Paulo</p>
+                                <p class="pForHubVagas d-flex"><i class="fa fa-briefcase briefcase-yellow" aria-hidden="true"></i>${vaga.type}</p>
+                                <p class="pForHubVagas d-flex"><i class="fa fa-info-circle info-circle-yellow" aria-hidden="true"></i>${vaga.status}</p>
+                                <div class = 'divBtnSeeMore'>
+                                    <button class="btnSeeMore" type="button" onclick="redirectToVagaId('${vaga.id}')">Ver Mais</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    `
-    })
+        `
+        })
+    }
+
+   
 }
 
 function redirectToVagaId(param) {

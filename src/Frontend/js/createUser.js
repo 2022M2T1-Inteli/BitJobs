@@ -40,7 +40,17 @@ async function verifyUserInfos() {
                     showConfirmButton: false,
                     timer: 2000
                 })
-                window.location.href = '/view/login.html'
+                $.post("http://localhost:3001/User/Login",
+                    {email : email, 
+                    password : senha}
+                , function(msg){
+                    if(msg.token) {
+                        window.sessionStorage.setItem('auth', msg.token)
+                        document.location.href = '../view/createCurriculum.html'
+                    }
+                }).fail(function(err) {
+                    errorMessage(err.responseJSON.error)
+                })
             },
             error: function(err) {
                 console.log(err.responseJSON.error)
