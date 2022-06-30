@@ -37,6 +37,8 @@ Encontramos como alternativa, portanto, o incentivo à participação e aumento 
 <img src="https://github.com/PedroHaggeBaptista/Matchagas/blob/main/imagens/Tela-index.png" alt="TELA INDEX DO SITE" border="0">
   INDEX page by <a href="https://github.com/2022M2T1/Projeto3">BitJobs</a>
 </p>
+<br>
+<p>Link do Projeto: <a href="https://matchagas.herokuapp.com/">https://matchagas.herokuapp.com/</a></p>
 <br><br><br>
 
 
@@ -173,8 +175,7 @@ npm start
 
 ## 🖇️ Documentação
 
-[Manual do Usuário]()<br><br>
-[WAD](https://github.com/PedroHaggeBaptista/Matchagas/blob/main/documentos/WAD%202.3.pdf)<br>
+[WAD](https://github.com/2022M2T1/Projeto3/blob/main/documentos/WAD%20-%20Documento%20Aplica%C3%A7%C3%A3o%20Web.pdf)<br>
 
 ## 🗃 Histórico de lançamentos
 
